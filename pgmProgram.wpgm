@@ -1,18 +1,23 @@
-import wollok.game.*
+import wollok.game.* //viene dentro del cliente de wollok. No es un archivo o elemento aparte
 import example.*
 
 program pacmanGame {
 	
 	// límites del juego
-	game.width(14)
-	game.height(8)
-	
+	game.width(20)
+	game.height(10)
+	game.cellSize(50)
+
 	// fondo
 	game.boardGround("pacmanBackground.jpg")
 	
 	// personaje principal
 	game.addVisualCharacter(pacman)
-	
+	keyboard.w().onPressDo({pacman.position(pacman.position().up(1))})
+	keyboard.s().onPressDo({pacman.position(pacman.position().down(1))})
+	keyboard.a().onPressDo({pacman.position(pacman.position().left(1))})
+	keyboard.d().onPressDo({pacman.position(pacman.position().right(1))})
+	keyboard.space().onPressDo({pacman.cambiarSkin("pacmanHD.png")})
 	// que arranque el juego!
 	game.start()
 	

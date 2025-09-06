@@ -1,6 +1,18 @@
 import wollok.game.*
 
 object pacman {
-	const property image = "pacman.png"
-	var property position = game.origin()
+	var property image = "pacman.png"
+	var position = game.at(15 , 5)
+
+	method image() = image
+	
+	method position(nuevaPosicion) {
+		position = nuevaPosicion
+	}
+
+	method position() = position
+
+	method cambiarSkin(nuevaSkin) {
+		image = nuevaSkin
+	}
 }
