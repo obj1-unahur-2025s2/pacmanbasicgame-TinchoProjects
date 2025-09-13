@@ -406,3 +406,19 @@
 {"level":"info","message":"⌛ Validating pgmProgram.wpgm","timeElapsed":148,"timestamp":"2025-09-13T15:16:46.226Z"}
 {"level":"info","message":"⌛ Validating pgmProgram.wpgm","timeElapsed":135,"timestamp":"2025-09-13T15:16:48.061Z"}
 {"level":"info","message":"⌛ Validating pgmProgram.wpgm","timeElapsed":132,"timestamp":"2025-09-13T15:16:48.434Z"}
+{"level":"info","message":"⌛ Validating pgmProgram.wpgm","timeElapsed":170,"timestamp":"2025-09-13T15:18:52.045Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":108,"timestamp":"2025-09-13T15:19:00.316Z"}
+{"level":"info","message":"⌛ Validating pgmProgram.wpgm","timeElapsed":176,"timestamp":"2025-09-13T15:19:00.493Z"}
+{"level":"info","message":"⌛ Validating pgmProgram.wpgm","timeElapsed":144,"timestamp":"2025-09-13T15:19:00.976Z"}
+{"level":"info","message":"⌛ Validating pgmProgram.wpgm","timeElapsed":149,"timestamp":"2025-09-13T15:19:03.058Z"}
+{"level":"info","message":"⌛ Validating pgmProgram.wpgm","timeElapsed":127,"timestamp":"2025-09-13T15:19:09.481Z"}
+{"level":"info","message":"⌛ Validating pgmProgram.wpgm","timeElapsed":120,"timestamp":"2025-09-13T15:19:10.828Z"}
+{"level":"info","message":"⌛ Validating pgmProgram.wpgm","timeElapsed":113,"timestamp":"2025-09-13T15:19:17.536Z"}
+{"level":"info","message":"⌛ Validating pgmProgram.wpgm","timeElapsed":152,"timestamp":"2025-09-13T15:19:30.450Z"}
+{"level":"info","message":"⌛ Validating pgmProgram.wpgm","timeElapsed":118,"timestamp":"2025-09-13T15:19:31.667Z"}
+{"level":"info","message":"⌛ Validating example.wlk","timeElapsed":142,"timestamp":"2025-09-13T15:19:39.338Z"}
+{"level":"info","message":"⌛ Validating pgmProgram.wpgm","timeElapsed":105,"timestamp":"2025-09-13T15:19:39.444Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":225,"timestamp":"2025-09-13T15:19:40.248Z"}
+{"level":"info","message":"⌛ Validating example.wlk","timeElapsed":161,"timestamp":"2025-09-13T15:19:40.425Z"}
+{"level":"info","message":"🚀 Program executed \u001b[3m\u001b[34mpgmProgram.pacmanGame\u001b[39m\u001b[23m on \u001b[3m\u001b[34m/home/tincho/MEGA/Documentos/ProyectosWollok/pacmanbasicgame-TinchoProjects\u001b[39m\u001b[23m","ok":true,"timeElapsed":396,"timestamp":"2025-09-13T15:19:42.556Z"}
+{"exitCode":"SIGHUP","level":"info","message":"👾 Game executed pgmProgram.pacmanGame on /home/tincho/MEGA/Documentos/ProyectosWollok/pacmanbasicgame-TinchoProjects","timeElapsed":38800,"timestamp":"2025-09-13T15:20:20.958Z"}

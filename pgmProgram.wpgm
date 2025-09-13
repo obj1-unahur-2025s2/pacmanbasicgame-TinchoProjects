@@ -24,6 +24,7 @@ program pacmanGame {
 		game.say(personaje,"Me quedan " + personaje.vidas() + "vidas")
 		})
 */	
+	const rivales = [fantasmaRojo, fantasmaAzul]
 	rivales.forEach({
 		rival => game.whenCollideDo(rivales, {
 		personaje => personaje.perderVida()
