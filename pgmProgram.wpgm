@@ -8,7 +8,6 @@ program pacmanGame {
 	// límites del juego
 	game.width(14)
 	game.height(8)
-	const rivales = (fantasmaRojo, fantasmaAzul)
 
 
 	// fondo
@@ -21,10 +20,9 @@ program pacmanGame {
 	keyboard.a().onPressDo({pacman.moverHaciaIzquierda()})
 	keyboard.d().onPressDo({pacman.moverHaciaDerecha()})
 
-
+	const rivales = [new Rival(numero = 1), new Rival(numero = 2)]
 	game.addVisual(fantasmaRojo)
 	game.addVisual(fantasmaAzul)
-
 /*
 	game.whenCollideDo(fantasmaRojo, {
 		personaje => personaje.perderVida()
@@ -32,9 +30,14 @@ program pacmanGame {
 		})
 */	
 	rivales.forEach({
-		rival => game.whenCollideDo(rivales, {
+		rivales =>
+		game.whenCollideDo(rivales, {
 		personaje => personaje.perderVida()
-		game.say(personaje,"Me quedan " + personaje.vidas() + "vidas")
+		game.say(personaje,"Me quedan " + personaje.vidas() + " vidas")
+		if (personaje.juegoTerminado()) {
+			game.say(personaje, "Fin del juego!!!")
+			game.onTick(500, "gameEnd", {game.stop()})
+		}
 		})
 	})
 

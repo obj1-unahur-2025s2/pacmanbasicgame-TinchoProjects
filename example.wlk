@@ -59,6 +59,14 @@ object cheery {
 	var property position = game.center()
 }
 
+class Rival {
+	const numero
+	
+	method image() = "rival" + numero.toString() + ".png"
+
+	method position() = game.at(numero + 1, numero + 1)
+}
+
 object fantasmaRojo {
 	method position() = game.at(3,3)
 	method image() = "rival1.png"
