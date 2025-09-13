@@ -15,7 +15,23 @@ program pacmanGame {
 	// personaje principal
 	game.addVisualCharacter(pacman)
 	
+	game.addVisual(fantasmaRojo)
+	game.addVisual(fantasmaAzul)
 
+/*
+	game.whenCollideDo(fantasmaRojo, {
+		personaje => personaje.perderVida()
+		game.say(personaje,"Me quedan " + personaje.vidas() + "vidas")
+		})
+*/	
+	rivales.forEach({
+		rival => game.whenCollideDo(rivales, {
+		personaje => personaje.perderVida()
+		game.say(personaje,"Me quedan " + personaje.vidas() + "vidas")
+		})
+	})
+
+/*
 	// rivales
 	const rivales = [new Rival(numero = 1), new Rival(numero = 2)]
 	
@@ -30,8 +46,11 @@ program pacmanGame {
 			}
 		})
 	}
-	
+*/
+
 	// que arranque el juego!
 	game.start()
-	
+	/*game.stop(
+		if (pacman.vidas == 0) {
+		game.say(personaje,"Juego terminado, perdiste!")})*/
 }
