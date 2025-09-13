@@ -2,17 +2,69 @@ import wollok.game.*
 
 object pacman {
 	var property image = "pacman.png"
-	var position = game.at(15 , 5)
+	var property position = game.origin()
+	var vidas =3
+
+	method vidas(){
+		return vidas
+	}
 
 	method image() = image
 	
-	method position(nuevaPosicion) {
-		position = nuevaPosicion
+	method perderVida() {
+		vidas = vidas -1
+		position = game.origin()
 	}
 
-	method position() = position
-
-	method cambiarSkin(nuevaSkin) {
-		image = nuevaSkin
+	method juegoTerminado() = vidas == 0
+	method moverHaciaArriba() {
+		if(self.position().y() == game.height() -1) {
+			self.position(game.at(self.position().x() , 0))
+		}
+		else {
+		self.position(self.position().up(1))
+		}
 	}
+
+	method moverHaciaAbajo() {
+		if(self.position().y() == 0) {
+			self.position(game.at(self.position().x() , game.height() -1))
+		}
+		else {
+		self.position(self.position().down(1))
+		}
+	}
+
+	method moverHaciaIzquierda() {
+		if(self.position().x() == 0) {
+			self.position(game.at(game.width() -1 , self.position().y()))
+		}
+		else {
+		self.position(self.position().left(1))
+		}
+	}
+
+	method moverHaciaDerecha() {
+		if(self.position().x() == game.width() -1) {
+			self.position(game.at(0 , self.position().y()))
+		}
+		else {
+		self.position(self.position().right(1))
+		}
+	}
+}
+
+object cheery {
+	var property image = "cheery.png"
+	var property position = game.center()
+}
+
+object fantasmaRojo {
+	method position() = game.at(3,3)
+	method image() = "rival1.png"
+}
+
+object fantasmaAzul {
+	method position() = game.at(5,6)
+	method image() = "rival2.png"
 }

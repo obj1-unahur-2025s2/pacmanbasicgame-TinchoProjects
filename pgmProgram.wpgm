@@ -3,22 +3,44 @@ import example.*
 
 program pacmanGame {
 	
+	game.title("Pacman!")
+
 	// límites del juego
-	game.width(20)
-	game.height(10)
-	game.cellSize(50)
+	game.width(14)
+	game.height(8)
+	const rivales = (fantasmaRojo, fantasmaAzul)
+
 
 	// fondo
 	game.boardGround("pacmanBackground.jpg")
 	
 	// personaje principal
-	game.addVisualCharacter(pacman)
-	keyboard.w().onPressDo({pacman.position(pacman.position().up(1))})
-	keyboard.s().onPressDo({pacman.position(pacman.position().down(1))})
-	keyboard.a().onPressDo({pacman.position(pacman.position().left(1))})
-	keyboard.d().onPressDo({pacman.position(pacman.position().right(1))})
-	keyboard.space().onPressDo({pacman.cambiarSkin("pacmanHD.png")})
+	game.addVisual(pacman)
+	keyboard.w().onPressDo({pacman.moverHaciaArriba()})
+	keyboard.s().onPressDo({pacman.moverHaciaAbajo()})
+	keyboard.a().onPressDo({pacman.moverHaciaIzquierda()})
+	keyboard.d().onPressDo({pacman.moverHaciaDerecha()})
+
+
+	game.addVisual(fantasmaRojo)
+	game.addVisual(fantasmaAzul)
+
+/*
+	game.whenCollideDo(fantasmaRojo, {
+		personaje => personaje.perderVida()
+		game.say(personaje,"Me quedan " + personaje.vidas() + "vidas")
+		})
+*/	
+	rivales.forEach({
+		rival => game.whenCollideDo(rivales, {
+		personaje => personaje.perderVida()
+		game.say(personaje,"Me quedan " + personaje.vidas() + "vidas")
+		})
+	})
+
 	// que arranque el juego!
 	game.start()
-	
+	/*game.stop(
+		if (pacman.vidas == 0) {
+		game.say(personaje,"Juego terminado, perdiste!")})*/
 }
