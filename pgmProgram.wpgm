@@ -36,7 +36,7 @@ program pacmanGame {
 		game.say(personaje,"Me quedan " + personaje.vidas() + " vidas")
 		if (personaje.juegoTerminado()) {
 			game.say(personaje, "Fin del juego!!!")
-			game.onTick(500, "gameEnd", {game.stop()})
+			game.onTick(200, "gameEnd", {game.stop()})
 		}
 		})
 	})

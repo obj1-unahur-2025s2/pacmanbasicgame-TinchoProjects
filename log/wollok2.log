@@ -1070,3 +1070,7 @@
 {"level":"info","message":"⌛ Validating pgmProgram.wpgm","timeElapsed":108,"timestamp":"2025-09-13T18:17:53.285Z"}
 {"level":"info","message":"🚀 Program executed \u001b[3m\u001b[34mpgmProgram.pacmanGame\u001b[39m\u001b[23m on \u001b[3m\u001b[34m/home/tincho/MEGA/Documentos/ProyectosWollok/pacmanbasicgame-TinchoProjects\u001b[39m\u001b[23m","ok":true,"timeElapsed":632,"timestamp":"2025-09-13T18:17:58.105Z"}
 {"exitCode":0,"level":"info","message":"👾 Game executed pgmProgram.pacmanGame on /home/tincho/MEGA/Documentos/ProyectosWollok/pacmanbasicgame-TinchoProjects","timeElapsed":9507,"timestamp":"2025-09-13T18:18:06.977Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":186,"timestamp":"2025-09-13T18:36:27.479Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":258,"timestamp":"2025-09-13T18:36:27.739Z"}
+{"level":"info","message":"⌛ Validating pgmProgram.wpgm","timeElapsed":254,"timestamp":"2025-09-13T18:36:27.995Z"}
+{"level":"info","message":"⌛ Validating pgmProgram.wpgm","timeElapsed":191,"timestamp":"2025-09-13T18:36:28.199Z"}
