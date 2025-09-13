@@ -528,3 +528,13 @@
 {"level":"info","message":"⌛ Validating pgmProgram.wpgm","timeElapsed":170,"timestamp":"2025-09-13T14:54:00.831Z"}
 {"level":"info","message":"⌛ Validating pgmProgram.wpgm","timeElapsed":169,"timestamp":"2025-09-13T14:54:01.003Z"}
 {"exitCode":"SIGHUP","level":"info","message":"👾 Game executed pgmProgram.pacmanGame on /home/tincho/MEGA/Documentos/ProyectosWollok/pacmanbasicgame-TinchoProjects","timeElapsed":1008444,"timestamp":"2025-09-13T14:55:21.626Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":330,"timestamp":"2025-09-13T15:07:13.544Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":201,"timestamp":"2025-09-13T15:07:13.752Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":164,"timestamp":"2025-09-13T15:07:13.918Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":193,"timestamp":"2025-09-13T15:07:15.271Z"}
+{"level":"info","message":"⌛ Validating example.wlk","timeElapsed":247,"timestamp":"2025-09-13T15:07:15.519Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":158,"timestamp":"2025-09-13T15:07:15.679Z"}
+{"level":"info","message":"⌛ Validating pgmProgram.wpgm","timeElapsed":226,"timestamp":"2025-09-13T15:07:15.942Z"}
+{"level":"info","message":"⌛ Validating example.wlk","timeElapsed":238,"timestamp":"2025-09-13T15:07:16.185Z"}
+{"level":"info","message":"⌛ Validating pgmProgram.wpgm","timeElapsed":166,"timestamp":"2025-09-13T15:07:16.351Z"}
+{"level":"info","message":"⌛ Validating example.wlk","timeElapsed":101,"timestamp":"2025-09-13T15:07:16.453Z"}
