@@ -20,19 +20,18 @@ program pacmanGame {
 	keyboard.a().onPressDo({pacman.moverHaciaIzquierda()})
 	keyboard.d().onPressDo({pacman.moverHaciaDerecha()})
 
-	const rivales = [new Rival(numero = 1), new Rival(numero = 2)]
-	game.addVisual(fantasmaRojo)
-	game.addVisual(fantasmaAzul)
+	//rivales
 /*
-	game.whenCollideDo(fantasmaRojo, {
-		personaje => personaje.perderVida()
-		game.say(personaje,"Me quedan " + personaje.vidas() + "vidas")
-		})
-*/	
-	rivales.forEach({
-		rivales =>
-		game.whenCollideDo(rivales, {
-		personaje => personaje.perderVida()
+	game.addVisual(new Rival(numero = 1))
+	game.addVisual(new Rival(numero = 2))
+*/
+
+	const rivales = [new Rival(numero = 1), new Rival(numero = 2)]
+
+		rivales.forEach({ rival =>
+		game.addVisual(rival)
+		game.whenCollideDo(rival, { personaje => 
+		personaje.perderVida()
 		game.say(personaje,"Me quedan " + personaje.vidas() + " vidas")
 		if (personaje.juegoTerminado()) {
 			game.say(personaje, "Fin del juego!!!")
@@ -40,6 +39,16 @@ program pacmanGame {
 		}
 		})
 	})
+/*	
+	game.addVisual(fantasmaRojo)
+	game.addVisual(fantasmaAzul)
+*/
+/*
+	game.whenCollideDo(fantasmaRojo, {
+		personaje => personaje.perderVida()
+		game.say(personaje,"Me quedan " + personaje.vidas() + "vidas")
+		})
+*/
 
 	// que arranque el juego!
 	game.start()
