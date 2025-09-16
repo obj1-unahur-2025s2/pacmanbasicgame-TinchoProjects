@@ -1,34 +1,50 @@
-import wollok.game.*
+import wollok.game.* //viene dentro del cliente de wollok. No es un archivo o elemento aparte
 import example.*
 
 program pacmanGame {
 	
 	game.title("Pacman!")
-	
+
 	// límites del juego
 	game.width(14)
 	game.height(8)
-	
+
+
 	// fondo
 	game.boardGround("pacmanBackground.jpg")
 	
 	// personaje principal
-	game.addVisualCharacter(pacman)
+	game.addVisual(pacman)
+	keyboard.w().onPressDo({pacman.moverHaciaArriba()})
+	keyboard.s().onPressDo({pacman.moverHaciaAbajo()})
+	keyboard.a().onPressDo({pacman.moverHaciaIzquierda()})
+	keyboard.d().onPressDo({pacman.moverHaciaDerecha()})
 
-	// rivales
-	const rivales = [new Rival(numero=1), new Rival(numero=2),new Rival(numero=3),new Rival(numero=4)]
-	
-	rivales.forEach { rival => 
+	//rivales
+
+	const rivales = [new Rival(numero = 1), new Rival(numero = 2)]
+
+	rivales.forEach({ rival =>
 		game.addVisual(rival)
-		game.whenCollideDo(rival, { personaje =>
-			personaje.chocarCon(rival) // se maneja un método polimórfico
+		game.whenCollideDo(rival, { personaje => 
+		personaje.chocarCon(rival)
 		})
 		game.onTick(1.randomUpTo(5) * 500, "movimiento", {
-			rival.acercarseA(pacman)
+				rival.acercarseA(pacman)
 		})
-	}
-	
+	})
+
+
+/*
+	game.whenCollideDo(fantasmaRojo, {
+		personaje => personaje.perderVida()
+		game.say(personaje,"Me quedan " + personaje.vidas() + "vidas")
+		})
+*/
+
 	// que arranque el juego!
 	game.start()
-	
+	/*game.stop(
+		if (pacman.vidas == 0) {
+		game.say(personaje,"Juego terminado, perdiste!")})*/
 }
