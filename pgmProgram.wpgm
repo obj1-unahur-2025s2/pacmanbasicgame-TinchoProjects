@@ -35,10 +35,6 @@ program pacmanGame {
 	})
 
 
-/*	
-	game.addVisual(fantasmaRojo)
-	game.addVisual(fantasmaAzul)
-*/
 /*
 	game.whenCollideDo(fantasmaRojo, {
 		personaje => personaje.perderVida()
