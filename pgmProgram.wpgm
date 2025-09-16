@@ -21,10 +21,6 @@ program pacmanGame {
 	keyboard.d().onPressDo({pacman.moverHaciaDerecha()})
 
 	//rivales
-/*
-	game.addVisual(new Rival(numero = 1))
-	game.addVisual(new Rival(numero = 2))
-*/
 
 	const rivales = [new Rival(numero = 1), new Rival(numero = 2)]
 
