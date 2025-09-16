@@ -90,7 +90,7 @@ class Rival {
 	method image() = "rival" + numero.toString() + ".png"
 
 	method acercarseA(personaje) {
-		var otroPosicion = personaje.position()
+		const otroPosicion = personaje.position()
 		var newX = position.x() + if (otroPosicion.x() > position.x()) 1 else -1
 		var newY = position.y() + if (otroPosicion.y() > position.y()) 1 else -1
 		// evitamos que se posicionen fuera del tablero
