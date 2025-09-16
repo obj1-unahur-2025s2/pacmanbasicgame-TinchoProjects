@@ -28,17 +28,17 @@ program pacmanGame {
 
 	const rivales = [new Rival(numero = 1), new Rival(numero = 2)]
 
-		rivales.forEach({ rival =>
+	rivales.forEach({ rival =>
 		game.addVisual(rival)
 		game.whenCollideDo(rival, { personaje => 
-		personaje.perderVida()
-		game.say(personaje,"Me quedan " + personaje.vidas() + " vidas")
-		if (personaje.juegoTerminado()) {
-			game.say(personaje, "Fin del juego!!!")
-			game.onTick(200, "gameEnd", {game.stop()})
-		}
+		personaje.chocarCon(rival)
+		})
+		game.onTick(1.randomUpTo(5) * 500, "movimiento", {
+				rival.acercarseA(pacman)
 		})
 	})
+
+
 /*	
 	game.addVisual(fantasmaRojo)
 	game.addVisual(fantasmaAzul)
